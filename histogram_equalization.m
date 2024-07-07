@@ -1,0 +1,17 @@
+%this is using function histeq()
+subplot(2,2,1)
+i=imread("pout.tif")
+imshow(i)
+title("original Image")
+subplot(2,2,2)
+imhist(i)
+title("original image's histogram")
+
+subplot(2,2,3)
+b=histeq(i)
+imshow(b)
+title("equalized image")
+
+subplot(2,2,4)
+imhist(b)
+title("equalized image histogram")
